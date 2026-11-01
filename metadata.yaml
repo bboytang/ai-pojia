@@ -1,0 +1,7 @@
+name: astrbot_plugin_ai_pojia
+display_name: AI破甲
+desc: 在模型请求的系统提示词中加载执行指令与授权 DEMO 工作流。
+version: v0.3.0
+author: bboytang
+repo: https://github.com/bboytang/ai-pojia
+astrbot_version: '>=4.29.3,<4.30.0'

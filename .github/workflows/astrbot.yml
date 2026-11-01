@@ -1,0 +1,25 @@
+name: Verify AI Pojia AstrBot
+on:
+  workflow_dispatch:
+  push:
+    branches: ['codex/astrbot-plugin']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/package_astrbot.py
+      - run: python tools/package_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: astrbot-plugin-ai-pojia
+          path: |
+            dist/astrbot_plugin_ai_pojia-v0.3.0.zip
+            dist/astrbot_plugin_ai_pojia-v0.3.0.zip.sha256

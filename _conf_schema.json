@@ -1,0 +1,12 @@
+{
+  "enabled": {
+    "description": "向经过 AstrBot on_llm_request 钩子的请求追加 AI破甲系统提示词；保留既有人格和聊天历史。",
+    "type": "bool",
+    "default": true
+  },
+  "authorized_execution": {
+    "description": "明确授权且范围清晰时直接执行、不重复确认；不改变模型规则、宿主权限或工具审批。",
+    "type": "bool",
+    "default": true
+  }
+}

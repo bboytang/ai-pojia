@@ -14,6 +14,8 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = (
+    "main.py", "astrbot_policy.py", "metadata.yaml", "_conf_schema.json",
+    "docs/astrbot.md", "tools/package_astrbot.py", "tests/test_astrbot_plugin.py",
     "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "plugin.json", ".gitignore", "install.py",
     "tools/manage_skill.py", "tools/manage_prompt.py", "tools/package_release.py",
     "tests/test_manage_skill.py", "tests/test_manage_prompt.py", "tests/test_install.py",
